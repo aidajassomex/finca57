@@ -68,3 +68,10 @@ html, body { background: var(--bg); color: var(--text); }
 .btn.outline:hover { background-color: #1b1b1b; }
 .cart { background: var(--card); border:1px solid #262626; }
 .cart-item { border-bottom:1px dashed #2a2a2a; }
+/* Logo como imagen */
+.logo-img{
+  height: 40px;             /* ajusta a 40–48px según te guste */
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
