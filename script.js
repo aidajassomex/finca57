@@ -157,7 +157,7 @@ function checkoutWhatsApp(){
     alert('Tu carrito está vacío.');
     return;
   }
-  const phone = window.WHATSAPP_NUMBER || '+5215512345678';
+  const phone = window.WHATSAPP_NUMBER || '+5215511950646';
   const url = `https://wa.me/${phone.replace(/[^\d]/g,'')}?text=${buildWhatsAppMessage()}`;
 
   // En móviles es más confiable abrir en la MISMA pestaña:
