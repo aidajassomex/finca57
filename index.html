@@ -81,14 +81,20 @@
     <button id="close-cart" aria-label="Cerrar carrito">✕</button>
   </div>
   <div id="cart-items" class="cart-items"></div>
-  <div class="cart-footer">
-    <div class="totals">
-      <div>Subtotal <span id="subtotal">$0.00</span></div>
-      <div>Envío <span id="shipping">$0.00</span></div>
-      <div class="total">Total <span id="total">$0.00</span></div>
-    </div>
-    <button id="checkout-wa" class="btn primary full">Finalizar por WhatsApp</button>
+<div class="cart-footer">
+  <!-- Selector de entrega -->
+  <div class="delivery">
+    <label><input type="radio" name="delivery" id="delivery-pickup" value="pickup" checked> Retiro en sucursal</label>
+    <label><input type="radio" name="delivery" id="delivery-shipping" value="shipping"> Envío a domicilio</label>
   </div>
+
+  <div class="totals">
+    <div>Subtotal <span id="subtotal">$0.00</span></div>
+    <div>Envío <span id="shipping">$0.00</span></div>
+    <div class="total">Total <span id="total">$0.00</span></div>
+  </div>
+  <button id="checkout-wa" class="btn primary full">Finalizar por WhatsApp</button>
+</div>
 </aside>
 
 <script>
