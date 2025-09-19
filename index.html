@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Finca 57 · Snacks & Semillas</title>
+  <meta name="description" content="Catálogo de botanas gourmet y semillas de Finca 57. Pide por WhatsApp o finaliza tu pedido en línea.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">F57</div>
+    <div class="brand-text">
+      <h1>Finca 57</h1>
+      <p>Snacks &amp; Semillas</p>
+    </div>
+  </div>
+  <nav class="actions">
+    <button id="open-cart" aria-label="Abrir carrito">🛒 <span id="cart-count">0</span></button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h2>Sabor de origen</h2>
+    <p>Botanas artesanales, ingredientes reales. Envíos a todo México.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="#catalogo">Ver catálogo</a>
+      <a class="btn outline" id="whatsapp-direct" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+    </div>
+  </section>
+
+  <section id="catalogo" class="catalog">
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Buscar producto…">
+      <select id="category">
+        <option value="">Todas las categorías</option>
+      </select>
+      <select id="sort">
+        <option value="featured">Destacados</option>
+        <option value="price-asc">Precio: bajo a alto</option>
+        <option value="price-desc">Precio: alto a bajo</option>
+      </select>
+    </div>
+    <div id="grid" class="grid"></div>
+  </section>
+
+  <section class="info">
+    <details>
+      <summary>¿Cómo comprar?</summary>
+      <ol>
+        <li>Explora el catálogo y agrega productos al carrito.</li>
+        <li>Cuando estés lista/o, haz clic en “Finalizar por WhatsApp”.</li>
+        <li>Se abrirá WhatsApp con tu pedido y datos básicos prellenados.</li>
+      </ol>
+    </details>
+    <details>
+      <summary>Pagos y envíos</summary>
+      <p>Aceptamos transferencias y pagos con tarjeta a través de enlaces de cobro. Envíos a todo México por paquetería; entregas el mismo día en sucursal oriente.</p>
+    </details>
+  </section>
+</main>
+
+<footer class="footer">
+  <div>
+    <strong>Finca 57</strong> · Hecho con ♥ en México
+  </div>
+  <div class="fine">
+    <a href="#" id="privacy-link">Aviso de privacidad</a> · <a href="#" id="terms-link">Términos</a>
+  </div>
+</footer>
+
+<!-- Carrito -->
+<aside id="cart" class="cart" aria-hidden="true">
+  <div class="cart-header">
+    <h3>Tu carrito</h3>
+    <button id="close-cart" aria-label="Cerrar carrito">✕</button>
+  </div>
+  <div id="cart-items" class="cart-items"></div>
+  <div class="cart-footer">
+    <div class="totals">
+      <div>Subtotal <span id="subtotal">$0.00</span></div>
+      <div>Envío <span id="shipping">$0.00</span></div>
+      <div class="total">Total <span id="total">$0.00</span></div>
+    </div>
+    <button id="checkout-wa" class="btn primary full">Finalizar por WhatsApp</button>
+  </div>
+</aside>
+
+<script>
+  // Cambia este número por tu WhatsApp con código de país (ej. México +52)
+  window.WHATSAPP_NUMBER = "+5215560978259";
+</script>
+<script src="script.js"></script>
+</body>
+</html>
