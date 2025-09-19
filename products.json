@@ -13,37 +13,15 @@
       "image": "imgs/chips-betabel.jpg"
     },
     {
-  "currency": "MXN",
-  "shipping_flat": 50,
-  "products": [
-    {
       "id": "chips-betabel-enchilado-1kg",
       "name": "Chips de Betabel Enchilado",
       "description": "Crujientes, horneados y ligeramente sazonados.",
       "price": 350,
       "unit": "Bolsa 1 kg",
       "category": "Chips de vegetales",
-      "tags": ["betabel", "chips", "vegetales"],
+      "tags": ["betabel", "enchilado", "chips"],
       "image": "imgs/chips-betabel-enchilado.jpg"
     },
-    {
-  "currency": "MXN",
-  "shipping_flat": 50,
-  "products": [
-    {
-      "id": "chips-camote-1kg",
-      "name": "Chips de Betabel Enchilado",
-      "description": "Crujientes, horneados y ligeramente sazonados.",
-      "price": 350,
-      "unit": "Bolsa 1 kg",
-      "category": "Chips de vegetales",
-      "tags": ["camote", "chips", "vegetales"],
-      "image": "imgs/chips-camote.jpg"
-    },
-    {
-  "currency": "MXN",
-  "shipping_flat": 50,
-  "products": [
     {
       "id": "chips-camote-1kg",
       "name": "Chips de Camote",
@@ -55,26 +33,18 @@
       "image": "imgs/chips-camote.jpg"
     },
     {
-  "currency": "MXN",
-  "shipping_flat": 50,
-  "products": [
-    {
       "id": "chips-camote-enchilado-1kg",
       "name": "Chips de Camote Enchilado",
       "description": "Crujientes, horneados y ligeramente sazonados.",
       "price": 350,
       "unit": "Bolsa 1 kg",
       "category": "Chips de vegetales",
-      "tags": ["camote", "chips", "vegetales"],
+      "tags": ["camote", "enchilado", "chips"],
       "image": "imgs/chips-camote-enchilado.jpg"
     },
     {
-  "currency": "MXN",
-  "shipping_flat": 50,
-  "products": [
-    {
       "id": "chips-jicama-1kg",
-      "name": "Chips de Jicama",
+      "name": "Chips de Jícama",
       "description": "Crujientes, horneados y ligeramente sazonados.",
       "price": 350,
       "unit": "Bolsa 1 kg",
@@ -83,23 +53,15 @@
       "image": "imgs/chips-jicama.jpg"
     },
     {
-  "currency": "MXN",
-  "shipping_flat": 50,
-  "products": [
-    {
       "id": "chips-jicama-enchilada-1kg",
-      "name": "Chips de Jicama Enchilada",
+      "name": "Chips de Jícama Enchilada",
       "description": "Crujientes, horneados y ligeramente sazonados.",
       "price": 350,
       "unit": "Bolsa 1 kg",
       "category": "Chips de vegetales",
-      "tags": ["jicama", "chips", "vegetales"],
+      "tags": ["jicama", "enchilado", "chips"],
       "image": "imgs/chips-jicama-enchilada.jpg"
     },
-    {
-  "currency": "MXN",
-  "shipping_flat": 50,
-  "products": [
     {
       "id": "chips-zanahoria-1kg",
       "name": "Chips de Zanahoria",
@@ -111,26 +73,18 @@
       "image": "imgs/chips-zanahoria.jpg"
     },
     {
-  "currency": "MXN",
-  "shipping_flat": 50,
-  "products": [
-    {
       "id": "chips-zanahoria-enchilada-1kg",
       "name": "Chips de Zanahoria Enchilada",
       "description": "Crujientes, horneados y ligeramente sazonados.",
       "price": 350,
       "unit": "Bolsa 1 kg",
       "category": "Chips de vegetales",
-      "tags": ["zanahoria", "chips", "vegetales"],
+      "tags": ["zanahoria", "enchilado", "chips"],
       "image": "imgs/chips-zanahoria-enchilada.jpg"
     },
     {
-  "currency": "MXN",
-  "shipping_flat": 50,
-  "products": [
-    {
       "id": "chips-platano-1kg",
-      "name": "Chips de Platano",
+      "name": "Chips de Plátano",
       "description": "Crujientes, horneados y ligeramente sazonados.",
       "price": 280,
       "unit": "Bolsa 1 kg",
@@ -139,27 +93,19 @@
       "image": "imgs/chips-platano.jpg"
     },
     {
-  "currency": "MXN",
-  "shipping_flat": 50,
-  "products": [
-    {
       "id": "chips-platano-enchilado-1kg",
-      "name": "Chips de Platano Enchilado",
+      "name": "Chips de Plátano Enchilado",
       "description": "Crujientes, horneados y ligeramente sazonados.",
       "price": 280,
       "unit": "Bolsa 1 kg",
       "category": "Chips de vegetales",
-      "tags": ["platano", "chips", "vegetales"],
+      "tags": ["platano", "enchilado", "chips"],
       "image": "imgs/chips-platano-enchilado.jpg"
     },
     {
-  "currency": "MXN",
-  "shipping_flat": 50,
-  "products": [
-    {
       "id": "chips-mix-natural-1kg",
-      "name": "Chips de Mix Natural",
-      "description": "Crujientes, horneados y ligeramente sazonados.",
+      "name": "Chips Mix Natural",
+      "description": "Mezcla de vegetales crujientes.",
       "price": 350,
       "unit": "Bolsa 1 kg",
       "category": "Chips de vegetales",
@@ -167,60 +113,44 @@
       "image": "imgs/chips-mix-natural.jpg"
     },
     {
-  "currency": "MXN",
-  "shipping_flat": 50,
-  "products": [
-    {
       "id": "chips-mix-enchilado-1kg",
-      "name": "Chips de Mix Enchilado",
-      "description": "Crujientes, horneados y ligeramente sazonados.",
+      "name": "Chips Mix Enchilado",
+      "description": "Mezcla de vegetales crujientes con chile.",
       "price": 350,
       "unit": "Bolsa 1 kg",
       "category": "Chips de vegetales",
-      "tags": ["mix", "chips", "vegetales"],
+      "tags": ["mix", "enchilado", "chips"],
       "image": "imgs/chips-mix-enchilado.jpg"
     },
     {
-  "currency": "MXN",
-  "shipping_flat": 50,
-  "products": [
-    {
       "id": "chips-mix-cheddar-1kg",
-      "name": "Chips de Mix Cheddar",
-      "description": "Crujientes, horneados y ligeramente sazonados.",
+      "name": "Chips Mix Cheddar",
+      "description": "Mezcla de vegetales con toque a queso cheddar.",
       "price": 350,
       "unit": "Bolsa 1 kg",
       "category": "Chips de vegetales",
-      "tags": ["mix", "chips", "vegetales"],
+      "tags": ["mix", "cheddar", "chips"],
       "image": "imgs/chips-mix-cheddar.jpg"
     },
     {
-  "currency": "MXN",
-  "shipping_flat": 50,
-  "products": [
-    {
       "id": "chips-mix-crema-1kg",
-      "name": "Chips de Mix Crema y Especias",
-      "description": "Crujientes, horneados y ligeramente sazonados.",
+      "name": "Chips Mix Crema y Especias",
+      "description": "Mezcla de vegetales con crema y especias.",
       "price": 350,
       "unit": "Bolsa 1 kg",
       "category": "Chips de vegetales",
-      "tags": ["mix", "chips", "vegetales"],
+      "tags": ["mix", "crema", "chips"],
       "image": "imgs/chips-mix-crema.jpg"
     },
     {
-  "currency": "MXN",
-  "shipping_flat": 50,
-  "products": [
-    {
-      "id": "chips-mix-jalapeño-1kg",
-      "name": "Chips de Mix Jalapeño",
-      "description": "Crujientes, horneados y ligeramente sazonados.",
+      "id": "chips-mix-jalapeno-1kg",
+      "name": "Chips Mix Jalapeño",
+      "description": "Mezcla de vegetales con chile jalapeño.",
       "price": 350,
       "unit": "Bolsa 1 kg",
       "category": "Chips de vegetales",
-      "tags": ["mix", "chips", "vegetales"],
-      "image": "imgs/chips-mix-jalapeño.jpg"
+      "tags": ["mix", "jalapeno", "chips"],
+      "image": "imgs/chips-mix-jalapeno.jpg"
     }
   ]
 }
