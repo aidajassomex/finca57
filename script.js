@@ -206,7 +206,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
   document.querySelector('#open-cart')?.addEventListener('click', openCart);
   document.querySelector('#close-cart')?.addEventListener('click', closeCart);
   document.querySelector('#checkout-wa')?.addEventListener('click', checkoutWhatsApp);
-
+  
+  // Selector de entrega
+  document.querySelector('#delivery-pickup')?.addEventListener('change', (e)=>{
+    if (e.target.checked){ state.delivery = 'pickup'; updateCartTotalsOnly(); }
+  });
+  document.querySelector('#delivery-shipping')?.addEventListener('change', (e)=>{
+    if (e.target.checked){ state.delivery = 'shipping'; updateCartTotalsOnly(); }
+  });
   // Scroll suave al catálogo
   const cta = document.querySelector('a[href="#catalogo"]');
   cta?.addEventListener('click', (e)=>{
