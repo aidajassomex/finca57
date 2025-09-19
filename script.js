@@ -159,7 +159,9 @@ function checkoutWhatsApp(){
   }
   const phone = window.WHATSAPP_NUMBER || '+5215512345678';
   const url = `https://wa.me/${phone.replace(/[^\d]/g,'')}?text=${buildWhatsAppMessage()}`;
-  window.open(url, '_blank');
+
+  // En móviles es más confiable abrir en la MISMA pestaña:
+  window.location.href = url;
 }
 
 document.addEventListener('DOMContentLoaded', ()=>{
