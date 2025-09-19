@@ -75,3 +75,8 @@ html, body { background: var(--bg); color: var(--text); }
   display: block;
   object-fit: contain;
 }
+.hero{
+  background: radial-gradient(ellipse at center, rgba(212,175,55,.08), transparent 60%),
+              url("imgs/logo-finca57-mark.png") center/420px no-repeat;
+  /* Sube logo-finca57-mark.png con transparencia, 1000–1600px de ancho */
+}
