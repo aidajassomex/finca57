@@ -75,8 +75,23 @@ html, body { background: var(--bg); color: var(--text); }
   display: block;
   object-fit: contain;
 }
+/* Fondo con logo en la sección hero */
 .hero{
-  background: radial-gradient(ellipse at center, rgba(212,175,55,.08), transparent 60%),
-              url("imgs/logo-finca57-mark.png") center/420px no-repeat;
-  /* Sube logo-finca57-mark.png con transparencia, 1000–1600px de ancho */
+  position: relative;
+  overflow: hidden;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;                 /* ocupa todo el hero */
+  background:
+    radial-gradient(ellipse at center, rgba(212,175,55,.14), transparent 60%),
+    url("imgs/hero-logo.png") center/420px no-repeat;  /* <-- usa tu archivo */
+  opacity: .9;
+  z-index: 0;
+  pointer-events: none;
+}
+.hero > *{
+  position: relative; 
+  z-index: 1;             /* el texto del hero queda arriba del logo */
 }
