@@ -1,8 +1,9 @@
 // Catálogo → carrito → WhatsApp (versión robusta)
 const state = {
   products: [],
-  cart: {}, // id -> {qty, product}
-  shippingFlat: 0
+  cart: {},            // id -> {qty, product}
+  shippingFlat: null,  // null = se cotiza
+  delivery: 'pickup'   // 'pickup' | 'shipping'
 };
 
 const peso = (v) => (v ?? 0).toLocaleString('es-MX', {style:'currency', currency:'MXN'});
@@ -100,15 +101,33 @@ function removeFromCart(id){
 function updateCartTotalsOnly(){
   const count = Object.values(state.cart).reduce((n, it)=> n + it.qty, 0);
   const subtotal = Object.values(state.cart).reduce((n, it)=> n + (it.qty * (it.product.price || 0)), 0);
-  const shipping = count > 0 ? state.shippingFlat : 0;
-  const total = subtotal + shipping;
+
+  let shippingText = '$0.00';
+  let shippingValue = 0;
+
+  if (state.delivery === 'shipping') {
+    if (typeof state.shippingFlat === 'number') {
+      shippingValue = state.shippingFlat;
+      shippingText = peso(shippingValue);
+    } else {
+      shippingText = 'Por cotizar';
+      shippingValue = 0;
+    }
+  } else {
+    // pickup
+    shippingText = '$0.00';
+    shippingValue = 0;
+  }
+
+  const total = subtotal + shippingValue;
+
   const cc = document.querySelector('#cart-count');
   if (cc) cc.textContent = count;
   const elSub = document.querySelector('#subtotal');
   const elShip = document.querySelector('#shipping');
   const elTotal = document.querySelector('#total');
   if (elSub) elSub.textContent = peso(subtotal);
-  if (elShip) elShip.textContent = peso(shipping);
+  if (elShip) elShip.textContent = (state.delivery === 'shipping' && typeof state.shippingFlat !== 'number') ? 'Por cotizar' : peso(shippingValue);
   if (elTotal) elTotal.textContent = peso(total);
 }
 
@@ -137,18 +156,33 @@ function buildWhatsAppMessage(){
   const lines = [];
   lines.push('Hola, quiero hacer este pedido:');
   Object.values(state.cart).forEach(({qty, product})=> {
-    const line = `• ${product.name} × ${qty} — ${peso((product.price||0) * qty)}`;
-    lines.push(line);
+    lines.push(`• ${product.name} × ${qty} — ${peso((product.price||0) * qty)}`);
   });
+
   const subtotal = Object.values(state.cart).reduce((n, it)=> n + it.qty * (it.product.price||0), 0);
-  const shipping = Object.keys(state.cart).length ? state.shippingFlat : 0;
-  const total = subtotal + shipping;
   lines.push(`Subtotal: ${peso(subtotal)}`);
-  if (shipping){ lines.push(`Envío estimado: ${peso(shipping)}`); }
-  lines.push(`Total: ${peso(total)}`);
+
+  if (state.delivery === 'pickup') {
+    lines.push('Entrega: Retiro en sucursal');
+    lines.push('Sucursal: Sucursal Oriente (ajústalo a tu dirección)');
+    lines.push(`Total a pagar al recoger: ${peso(subtotal)}`);
+  } else {
+    // envío a domicilio
+    if (typeof state.shippingFlat === 'number') {
+      lines.push(`Envío: ${peso(state.shippingFlat)}`);
+      lines.push(`Total: ${peso(subtotal + state.shippingFlat)}`);
+    } else {
+      lines.push('Envío: por cotizar (según dirección)');
+      lines.push(`Total (sin envío): ${peso(subtotal)}`);
+    }
+    lines.push('');
+    lines.push('Dirección de envío (calle, número, colonia, CP, ciudad y estado):');
+  }
+
+  lines.push('');
   lines.push('Nombre:');
-  lines.push('Dirección de envío:');
   lines.push('Método de pago preferido (transferencia / tarjeta / efectivo):');
+
   return encodeURIComponent(lines.join('\n'));
 }
 
