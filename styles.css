@@ -75,3 +75,36 @@ html, body { background: var(--bg); color: var(--text); }
   display: block;
   object-fit: contain;
 }
+/* Menú superior (links) */
+.actions{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.actions .toplink{
+  padding:8px 10px;
+  border-radius:8px;
+  text-decoration:none;
+  color: var(--text);
+  opacity:.9;
+  border: 1px solid transparent;
+}
+.actions .toplink:hover{
+  border-color: #e5e7eb22;
+  opacity:1;
+}
+
+/* Sección Quiénes Somos */
+.quienes{
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+.quienes h2{
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+.quienes p{
+  color: var(--muted);
+  margin: 6px 0 0;
+}
