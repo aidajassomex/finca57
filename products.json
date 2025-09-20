@@ -158,7 +158,7 @@
       "description": "Fresa entera deshidratada enchilada.",
       "price": 150,
       "unit": "Bolsa 500 g",
-      "category": "Deshidratados Enchilados",
+      "category": "Deshidratados enchilados",
       "tags": ["fresa", "deshidratada", "enchilada"],
       "image": "imgs/fresa-deshidratada-enchilada.jpg"
     },
@@ -168,7 +168,7 @@
       "description": "Cereza entera deshidratada enchilada.",
       "price": 150,
       "unit": "Bolsa 500 g",
-      "category": "Deshidratados Enchilados",
+      "category": "Deshidratados enchilados",
       "tags": ["cereza", "deshidratada", "enchilada"],
       "image": "imgs/cereza-deshidratada-enchilada.jpg"
     },
@@ -178,7 +178,7 @@
       "description": "Mango rebanado deshidratado enchilado.",
       "price": 150,
       "unit": "Bolsa 500 g",
-      "category": "Deshidratados Enchilados",
+      "category": "Deshidratados enchilados",
       "tags": ["mango", "deshidratada", "enchilada"],
       "image": "imgs/fresa-deshidratada-enchilada.jpg"
     },
@@ -188,7 +188,7 @@
       "description": "Mango entero deshidratado preparado.",
       "price": 150,
       "unit": "Bolsa 500 g",
-      "category": "Deshidratados Enchilados",
+      "category": "Deshidratados enchilados",
       "tags": ["mango", "deshidratado", "preparado"],
       "image": "imgs/mango-deshidratado-preparado.jpg"
     },
@@ -198,17 +198,17 @@
       "description": "Ciruela entera deshidratada enchilada.",
       "price": 150,
       "unit": "Bolsa 500 g",
-      "category": "Deshidratados Enchilados",
+      "category": "Deshidratados enchilados",
       "tags": ["ciruela", "deshidratada", "enchilada"],
       "image": "imgs/ciruela-deshidratada-enchilada.jpg"
     },
     {
       "id": "chabacano-deshidratado-enchilado-500g",
-      "name": "Chabacano Deshidratado Enchilado",
+      "name": "Chabacano Deshidratado enchilado",
       "description": "Chabacano entero deshidratado enchilado.",
       "price": 150,
       "unit": "Bolsa 500 g",
-      "category": "Deshidratados Enchilados",
+      "category": "Deshidratados enchilados",
       "tags": ["chabacano", "deshidratado", "enchilado"],
       "image": "imgs/chabacano-deshidratado-enchilado.jpg"
     },
@@ -218,7 +218,7 @@
       "description": "Datil entero sin hueso enchhilado.",
       "price": 150,
       "unit": "Bolsa 500 g",
-      "category": "Deshidratados Enchilados",
+      "category": "Deshidratados enchilados",
       "tags": ["datil", "deshidratado", "enchilado"],
       "image": "imgs/datil-deshidratado-enchilado.jpg"
     }
