@@ -24,15 +24,18 @@ async function loadProducts(){
     const data = await res.json();
     state.products = Array.isArray(data.products) ? data.products : [];
     state.shippingFlat = Number(data.shipping_flat || 0);
-    // categories
-    const cats = Array.from(new Set(state.products.map(p=>p.category).filter(Boolean))).sort();
-    const sel = document.querySelector('#category');
-    sel.innerHTML = '<option value="">Todas las categorías</option>';
-    cats.forEach(c=> {
-      const opt = document.createElement('option');
-      opt.value = c; opt.textContent = c;
-      sel.appendChild(opt);
-    });
+    // categories con orden y nombres oficiales
+const sel = document.querySelector('#category');
+if (sel){
+  sel.innerHTML = '<option value="">Todas las categorías</option>';
+  CATEGORY_ORDER.forEach(c => {
+    const opt = document.createElement('option');
+    opt.value = c;
+    opt.textContent = c;
+    sel.appendChild(opt);
+  });
+}
+
     renderGrid();
   }catch(err){
     console.error('[loadProducts]', err);
