@@ -5,6 +5,15 @@ const state = {
   shippingFlat: null,  // null = se cotiza
   delivery: 'pickup'   // 'pickup' | 'shipping'
 };
+// Orden y nombres oficiales del menú de categorías
+const CATEGORY_ORDER = [
+  "Chips de vegetales",
+  "Deshidratados enchilados",
+  "Semillas con chocolate",
+  "Semillas selectas",
+  "Gomitas enchiladas",
+  "Fruta deshidratada"
+];
 
 const peso = (v) => (v ?? 0).toLocaleString('es-MX', {style:'currency', currency:'MXN'});
 
