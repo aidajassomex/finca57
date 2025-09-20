@@ -218,34 +218,49 @@ document.addEventListener('DOMContentLoaded', ()=>{
   document.querySelector('#open-cart')?.addEventListener('click', openCart);
   document.querySelector('#close-cart')?.addEventListener('click', closeCart);
   document.querySelector('#checkout-wa')?.addEventListener('click', checkoutWhatsApp);
-  
-  // Selector de entrega
+
+  // Selector de entrega (¡ojo: cada uno cierra con '});'!)
   document.querySelector('#delivery-pickup')?.addEventListener('change', (e)=>{
     if (e.target.checked){ state.delivery = 'pickup'; updateCartTotalsOnly(); }
-  // Mayoreo: WhatsApp con mensaje prellenado
-const mayoreo = document.querySelector('#nav-mayoreo');
-if (mayoreo){
-  const phone = (window.WHATSAPP_NUMBER || '+5215512345678').replace(/[^\d]/g,'');
-  const msg = encodeURIComponent(
-    'Hola, me interesa el catálogo de mayoreo de Finca 57.\n' +
-    'Por favor compártanme la lista de precios por volumen y presentaciones.\n' +
-    'Datos: \n• Nombre:\n• Ciudad/Estado:\n• Giro (tienda/evento):'
-  );
-  mayoreo.href = `https://wa.me/${phone}?text=${msg}`;
-}
-
-// Scroll suave para los links del top
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click', (e)=>{
-    const id = a.getAttribute('href');
-    if (id && id.startsWith('#')){
-      const el = document.querySelector(id);
-      if (el){
-        e.preventDefault();
-        el.scrollIntoView({behavior:'smooth'});
-      }
-    }
   });
+  document.querySelector('#delivery-shipping')?.addEventListener('change', (e)=>{
+    if (e.target.checked){ state.delivery = 'shipping'; updateCartTotalsOnly(); }
+  });
+
+  // Mayoreo: WhatsApp con mensaje prellenado (fuera de los listeners anteriores)
+  const mayoreo = document.querySelector('#nav-mayoreo');
+  if (mayoreo){
+    const phone = (window.WHATSAPP_NUMBER || '+5215512345678').replace(/[^\d]/g,'');
+    const msg = encodeURIComponent(
+      'Hola, me interesa el catálogo de mayoreo de Finca 57.\n' +
+      'Por favor compártanme la lista de precios por volumen y presentaciones.\n' +
+      'Datos: \n• Nombre:\n• Ciudad/Estado:\n• Giro (tienda/evento):'
+    );
+    mayoreo.href = `https://wa.me/${phone}?text=${msg}`;
+  }
+
+  // Scroll suave para TODOS los links con hash (#...)
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', (e)=>{
+      const id = a.getAttribute('href');
+      if (id && id.startsWith('#')){
+        const el = document.querySelector(id);
+        if (el){
+          e.preventDefault();
+          el.scrollIntoView({behavior:'smooth'});
+        }
+      }
+    });
+  });
+
+  // WhatsApp directo del hero (si existe)
+  const waDirect = document.querySelector('#whatsapp-direct');
+  if (waDirect){
+    const phone = window.WHATSAPP_NUMBER || '+5215512345678';
+    waDirect.href = `https://wa.me/${phone.replace(/[^\d]/g,'')}`;
+  }
+
+  loadProducts();
 });
     
   document.querySelector('#delivery-shipping')?.addEventListener('change', (e)=>{
