@@ -222,7 +222,32 @@ document.addEventListener('DOMContentLoaded', ()=>{
   // Selector de entrega
   document.querySelector('#delivery-pickup')?.addEventListener('change', (e)=>{
     if (e.target.checked){ state.delivery = 'pickup'; updateCartTotalsOnly(); }
+  // Mayoreo: WhatsApp con mensaje prellenado
+const mayoreo = document.querySelector('#nav-mayoreo');
+if (mayoreo){
+  const phone = (window.WHATSAPP_NUMBER || '+5215512345678').replace(/[^\d]/g,'');
+  const msg = encodeURIComponent(
+    'Hola, me interesa el catálogo de mayoreo de Finca 57.\n' +
+    'Por favor compártanme la lista de precios por volumen y presentaciones.\n' +
+    'Datos: \n• Nombre:\n• Ciudad/Estado:\n• Giro (tienda/evento):'
+  );
+  mayoreo.href = `https://wa.me/${phone}?text=${msg}`;
+}
+
+// Scroll suave para los links del top
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', (e)=>{
+    const id = a.getAttribute('href');
+    if (id && id.startsWith('#')){
+      const el = document.querySelector(id);
+      if (el){
+        e.preventDefault();
+        el.scrollIntoView({behavior:'smooth'});
+      }
+    }
   });
+});
+    
   document.querySelector('#delivery-shipping')?.addEventListener('change', (e)=>{
     if (e.target.checked){ state.delivery = 'shipping'; updateCartTotalsOnly(); }
   });
